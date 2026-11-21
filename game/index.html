@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harbour at Dusk — Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="title">
+    <h1>Harbour at Dusk</h1>
+    <p>Spot the difference — seven things changed between the two pictures.</p>
+  </div>
+  <div class="hud">
+    <span id="found-count" class="chip">Found 0 / 7</span>
+    <span id="timer" class="chip">00:00</span>
+    <span id="hint-count" class="chip">Hints: 3</span>
+    <span id="miss-count" class="chip">Misses: 0</span>
+  </div>
+</header>
+
+<main class="stage">
+  <figure class="panel">
+    <figcaption>Left harbour</figcaption>
+    <canvas id="panel-left" width="620" height="440"></canvas>
+  </figure>
+  <figure class="panel">
+    <figcaption>Right harbour</figcaption>
+    <canvas id="panel-right" width="620" height="440"></canvas>
+  </figure>
+</main>
+
+<footer class="controls">
+  <button id="hint-btn" type="button">Hint (H) — 3 left</button>
+  <button id="restart-btn" type="button">Restart (R)</button>
+  <button id="sound-btn" type="button">Sound: on</button>
+  <p class="help">Click a difference on either picture to circle it. Keyboard: H hint, R restart, M sound.</p>
+</footer>
+
+<div id="win-overlay" class="hidden">
+  <div class="win-card">
+    <h2>Harbour Master!</h2>
+    <p>You found all 7 differences.</p>
+    <p>Time: <strong id="win-time">00:00</strong> &nbsp;·&nbsp; Misses: <strong id="win-misses">0</strong></p>
+    <button id="again-btn" type="button">Play again</button>
+  </div>
+</div>
+
+<script type="module" src="game.js"></script>
+</body>
+</html>
